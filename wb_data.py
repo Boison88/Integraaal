@@ -26,7 +26,7 @@ def get_products(response):
     products = []
     for product in products_response:
         products.append({
-            'title': product.get('name', None),
+            'title': product.get('name'),
             'price': f"{product.get('sizes')[0].get('price', {}).get('basic', 0) // 100} руб.",
             'link': f"https://www.wildberries.ru/catalog/{product.get('id')}/detail.aspx",
         })
