@@ -7,6 +7,8 @@
 * использует _concurrent.futures_ для ускорения процесса парсинга
 * сохраняет результат в формате JSON
 
+Пример JSON с результатом находится в файле _fixture.json_
+
 ***
 ### How to install
 #### 1. Clone this repository
