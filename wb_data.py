@@ -46,7 +46,10 @@ def main():
 
     # запускаем параллельную загрузку данных
     with ThreadPoolExecutor(max_workers=5) as executor:
-        results = list(executor.map(get_category, urls))
+        try:
+            results = list(executor.map(get_category, urls))
+        except Exception as e:
+            print(f"Произошла ошибка при загрузке данных: {e}")
 
     # сохраняем результат в JSON отдельно по каждой категории
     suffix = 0
